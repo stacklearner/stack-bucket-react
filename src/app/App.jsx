@@ -1,17 +1,9 @@
-import { StoreProvider, createStore, action } from 'easy-peasy';
+import { StoreProvider } from 'easy-peasy';
 import { Helmet } from 'react-helmet';
 
 // Router
 import AppRouter from './router';
-
-const store = createStore({
-	todos: {
-		items: ['Create store', 'Wrap application', 'Use store'],
-		add: action((state, payload) => {
-			state.items.push(payload);
-		}),
-	},
-});
+import store from '../store';
 
 function App() {
 	return (
